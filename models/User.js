@@ -9,10 +9,7 @@ const UserSchema=new Schema({
         type:String,
         required:true
     },
-    firstName:{
-        type:String
-    },
-    lastName:{
+    Name:{
         type:String
     },
     image:{
@@ -21,4 +18,5 @@ const UserSchema=new Schema({
 });
 
 //create coll n add schema
-mongoose.model('users',UserSchema)
+const User=mongoose.model('users',UserSchema)
+module.exports = User;

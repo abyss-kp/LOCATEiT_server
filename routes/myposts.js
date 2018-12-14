@@ -3,10 +3,9 @@ const mongoose=require('mongoose')
 const Post=mongoose.model('posts')
 var EventEmitter=require('events')
 
-    function heyo(){
+    function mypost(id){
     var emitter=new EventEmitter();
-    console.log("heyo")
-    Post.find({ }).
+   Post.find({ gid: id.gid}).
     then(reslt=>{
         console.log(reslt)
        // res.send("found")
@@ -17,6 +16,6 @@ var EventEmitter=require('events')
     //return em.emit('hii')
     }
 
-exports.heyo=heyo
+exports.mypost=mypost
 
-module.exports.heyo=heyo;
+module.exports.mypost=mypost
