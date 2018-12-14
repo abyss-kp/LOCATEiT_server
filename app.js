@@ -81,12 +81,7 @@ app.post('/find/myposts',function(req,res){
 app.use('/posts',posts)
 
  app.use('/oauth',oauth)
-.on('gotId',function(gID){
-    res.send({"msg":"Done"})
-}) 
-.on('exists',function(gID){
-    res.send({"msg":"already there"})
-}) 
+
 //set global vars
 app.use((req,res,next)=>{
     res.locals.user=req.user||null;
